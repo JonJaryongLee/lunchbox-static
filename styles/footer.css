@@ -1,0 +1,6 @@
+.footerContainer {
+  border-top: solid 1px gray;
+  padding: 10px 10px 10px 10px;
+  font-size: 0.5rem;
+  font-weight: bold;
+}
