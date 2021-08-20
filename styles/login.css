@@ -1,0 +1,32 @@
+/* .alert {
+  position: absolute;
+  width: 100%;
+} */
+
+.loginMain {
+  grid-template-rows: 2fr 1fr 50px;
+}
+
+.idAndPasswd,
+.wannaJoin {
+  margin: 10px 40px 10px 40px;
+}
+
+.idAndPasswd {
+  padding-top: 50px;
+  display: grid;
+  grid-template-rows: 70px 70px 40px;
+}
+
+.loginButton {
+  margin-top: 10px;
+  color: white;
+  border-radius: 10px;
+}
+
+.wannaJoin {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  font-size: 0.5rem;
+  font-weight: bold;
+}
