@@ -1,10 +1,5 @@
-/* .alert {
-  position: absolute;
-  width: 100%;
-} */
-
 .loginMain {
-  grid-template-rows: 2fr 1fr 50px;
+  grid-template-rows: 30px 2fr 1fr 50px;
 }
 
 .idAndPasswd,
@@ -29,4 +24,8 @@
   grid-template-columns: 4fr 1fr;
   font-size: 0.5rem;
   font-weight: bold;
+}
+
+.loginFailedAlert {
+  display: none;
 }
