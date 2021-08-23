@@ -1,11 +1,3 @@
-const passwordCheck = (userTypedPassword, passwordInDB) => {
-  if (userTypedPassword === passwordInDB) {
-    return true;
-  } else {
-    return false;
-  }
-};
-
 const showAlarm = (failedAlert) => {
   failedAlert.style.display = "block";
   setTimeout(() => {
@@ -18,21 +10,16 @@ const login = async () => {
   const password = document.querySelector(".password-input").value;
   const failedAlert = document.querySelector(".loginFailedAlert");
   try {
-    const response = await axios.get("../test_json/user.json");
-    const users = response.data.users;
-    const matchedId = users.filter((user) => user.user_id === id);
-    if (matchedId.length === 0) {
-      showAlarm(failedAlert);
+    const response = await axios.post('../php/login.php',{
+        id: id,
+        pw: password
+    });
+    if(response.data){
+      location.replace("../main.html");
     } else {
-      const isPasswordCorrect = passwordCheck(password, matchedId[0].password);
-      if (isPasswordCorrect) {
-        // 해당 아이디를 main.js 로 보내야함.
-        location.replace("../main.html");
-      } else {
-        showAlarm(failedAlert);
-      }
+      showAlarm(failedAlert);
     }
   } catch (error) {
-    console.error(error);
+      console.log(error);
   }
 };
