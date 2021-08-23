@@ -1,3 +1,4 @@
+// 세션 테스트용
 const test = async () => {
     try {
         const response = await axios.get('../php/test.php');

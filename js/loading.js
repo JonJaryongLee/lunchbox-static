@@ -1,3 +1,4 @@
+// 3초후 로그인화면으로 이동 
 setTimeout(() => {
-  window.location.href = "login.html";
+  location.href = "login.html";
 }, 3000);

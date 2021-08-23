@@ -1,7 +1,14 @@
+/* 
+  30px: 숨겨져있는 경고창용
+  2fr: 아이디와 패스워드 및 로그인버튼
+  1fr: 회원가입 영역
+  50px: footer 
+*/
 .loginMain {
   grid-template-rows: 30px 2fr 1fr 50px;
 }
 
+/* 두 영역을 일정하게 맞추기위해 존재 */
 .idAndPasswd,
 .wannaJoin {
   margin: 10px 40px 10px 40px;
@@ -10,6 +17,11 @@
 .idAndPasswd {
   padding-top: 50px;
   display: grid;
+  /* 
+    70px: 아이디입력
+    70px: 패스워드입력
+    40px: 로그인버튼 
+  */
   grid-template-rows: 70px 70px 40px;
 }
 
@@ -21,11 +33,16 @@
 
 .wannaJoin {
   display: grid;
+  /* 
+    4fr: 혹시 경대도시락이 처음이신가요?
+    1fr: 회원가입링크 
+  */
   grid-template-columns: 4fr 1fr;
   font-size: 0.5rem;
   font-weight: bold;
 }
 
+/* 평소엔 가려져있다가 로그인 실패하면 js에서 1초간 킴 */
 .loginFailedAlert {
   display: none;
 }

@@ -2,16 +2,24 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="styles/allPages.css">
-    <link rel="stylesheet" href="styles/login.css">
-    <link rel="stylesheet" href="styles/footer.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="styles/allPages.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    
     <title>경대도시락</title>
+    
+    <!-- js -->
     <script src="js/login.js"></script>
+    
     <!-- axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+
+    <!-- bootstrap cdn -->
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
@@ -23,6 +31,7 @@
 
 <body>
     <div class="loginMain fullsize">
+        <!-- 평소엔 가려져있다가 로그인 실패 시 등장 -->
         <section class="loginFailedAlertContainer">
             <div class="loginFailedAlert alert alert-danger" role="alert">
                 로그인 실패!
@@ -44,7 +53,7 @@
             </div>
         </section>
         <section class=wannaJoin>
-            <span>혹시 조교도시락이 처음이신가요?</span>
+            <span>혹시 경대도시락이 처음이신가요?</span>
             <a href="join.html">회원가입</a>
         </section>
         <footer class="footerContainer">

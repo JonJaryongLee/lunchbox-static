@@ -1,3 +1,4 @@
+/* fullsize는 화면크기를 반응형으로 바로잡아주기위해 존재함 */
 .fullsize {
   min-height: 100vh;
   display: grid;
