@@ -1,36 +1,33 @@
 <!-- 이 페이지는 맨 첫 화면의 웰컴페이지 담당
-해당 페이지의 js는 loading.js라고 쓰여져 있으나
 실제 로딩은 아님. 3초동안 홍보하기 위한 용도일 뿐. -->
 
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <!-- css -->
-    <link rel="stylesheet" href="styles/loading.css">
-    <link rel="stylesheet" href="styles/allPages.css">
+    <link rel="stylesheet" href="styles/firstPage.css" />
+    <link rel="stylesheet" href="styles/allPages.css" />
 
     <title>경대도시락</title>
 
     <!-- js -->
-    <script src="js/loading.js"></script>
-</head>
+    <script src="js/firstPage.js"></script>
+  </head>
 
-<body>
+  <body>
     <!-- fullsize는 화면크기를 반응형으로 바로잡아주기위해 존재함 -->
     <div class="fullsize loading">
-        <div class="firstLoadingTitle">
-            <h1>설레는 점심시간</h1>
-        </div>
-        <div class="lunchboxIconContainer">
-            <img src="images/lunchbox-icon.png" alt="런치박스아이콘" height="250" />
-        </div>
-        <h1>경대도시락</h1>
+      <div class="firstLoadingTitle">
+        <h1>설레는 점심시간</h1>
+      </div>
+      <div class="lunchboxIconContainer">
+        <img src="images/lunchbox-icon.png" alt="런치박스아이콘" height="250" />
+      </div>
+      <h1>경대도시락</h1>
     </div>
-</body>
-
+  </body>
 </html>

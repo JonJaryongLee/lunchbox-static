@@ -1,0 +1,67 @@
+/* 헤더  50px
+콘텐트 1fr
+푸터  50px */
+
+.main {
+  grid-template-rows: 50px 1fr 50px;
+}
+
+header {
+  border-bottom: 1px solid gray;
+}
+
+/* 오른쪽으로 정렬하기위해 float 사용 */
+.myButton {
+  float: right;
+  margin-right: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: grey;
+}
+
+.loading {
+  padding-top: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mainContent {
+  /* 처음에 안보였다가 로딩 끝나면 block */
+  display: none;
+  text-align: center;
+  margin-top: 40px;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-weight: bold;
+}
+
+.whatDate {
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+img {
+  border-radius: 50px;
+}
+
+.menuName {
+  font-size: 1.3rem;
+  margin-top: 20px;
+}
+
+.menuExplain {
+  font-size: 0.8rem;
+}
+
+.orderBtnMain {
+  margin-top: 20px;
+}
+
+.orderBtnLink {
+  color: white;
+  /* a태그 밑줄제거위해 */
+  text-decoration: none;
+  /* 클릭했을 때 작동하는 영역 조정 위해 */
+  display: inline-block;
+  width: 100%;
+}
