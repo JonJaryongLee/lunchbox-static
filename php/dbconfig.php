@@ -12,7 +12,7 @@ ini_set("display_errors", 1);
 header("Content-Type:application/json");
 
 // DB 접속
-$host = '203.255.3.144:1315';
+$host = 'localhost:1315';
 $user = 'admin';
 $pw = 'lunchbox';
 $dbName = 'lunchbox';
