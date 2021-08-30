@@ -13,7 +13,7 @@ header("Content-Type:application/json");
 
 // DB 접속
 $host = '203.255.3.144:1315';
-$user = 'admin';
+$user = 'lunchbox';
 $pw = 'lunchbox';
 $dbName = 'lunchbox';
 $db = new mysqli($host, $user, $pw, $dbName);
