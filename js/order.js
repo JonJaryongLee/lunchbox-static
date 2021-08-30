@@ -1,9 +1,10 @@
-// 세션테스트
-const test = async () => {
-    try {
-        const response = await axios.get("../php/test.php");
-        console.log(response.data);
-    } catch(error) {
-        console.log(error);
+onload = async () => {
+  try {
+    const response = await axios.get("../php/sessionCheck.php");
+    if (!response.data) {
+      location.href = "login.html"; // 로그인정보가 없으면 로그인화면으로
     }
-}
+  } catch (error) {
+    console.log(error);
+  }
+};

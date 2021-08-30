@@ -40,8 +40,22 @@ header {
   font-weight: bold;
 }
 
-img {
-  border-radius: 50px;
+.foodImg {
+  border: 1px solid grey;
+  border-radius: 30px;
+}
+
+.leftBtn,
+.rightBtn {
+  font-size: 1.5rem;
+}
+
+.leftBtn {
+  margin-right: 10px;
+}
+
+.rightBtn {
+  margin-left: 10px;
 }
 
 .menuName {

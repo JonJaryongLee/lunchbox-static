@@ -25,12 +25,6 @@
   grid-template-rows: 70px 70px 40px;
 }
 
-.loginButton {
-  margin-top: 10px;
-  color: white;
-  border-radius: 10px;
-}
-
 .wannaJoin {
   display: grid;
   /* 

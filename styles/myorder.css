@@ -1,0 +1,63 @@
+/* 
+  1fr: 뒤로가기 버튼
+  1.5fr: 나의 주문내역
+  4fr: 주문정보
+  2fr: 버튼부
+  50px: 푸터 
+*/
+.myOrderMain {
+  grid-template-rows: 1fr 1.5fr 4fr 2fr 50px;
+}
+
+.toMainBtn,
+header,
+main,
+section {
+  padding: 15px 15px 15px 15px;
+}
+
+.toMainBtn {
+  font-size: 1.3rem;
+}
+
+.myMenu,
+.quantity,
+.address,
+.time,
+.demandContainer {
+  font-weight: bold;
+  color: grey;
+}
+
+.myOrderTitle {
+  font-weight: bold;
+  color: black;
+}
+
+.quantity,
+.address,
+.time,
+.demandContainer {
+  font-size: 0.9rem;
+  margin-top: 15px;
+}
+
+.prevBtn, .nextBtn {
+    font-size: 1.3rem;
+}
+
+.nextBtn, .cancelBtn {
+    float: right;
+}
+
+.fixAndCancelBtnContainer {
+    margin-top: 20px;
+}
+
+.fixBtn {
+    margin-left: 40px;
+}
+
+.cancelBtn {
+    margin-right: 40px;
+}

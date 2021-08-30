@@ -1,0 +1,36 @@
+/* 
+  30px: 숨겨져있는 경고창용
+  1px: 뒤로가기버튼
+  2fr: 아이디, 패스워드, 기본 배달주소 및 회원가입버튼
+  50px: footer 
+*/
+.joinMain {
+  grid-template-rows: 30px 30px 2fr 50px;
+}
+
+.toLoginBtn {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.idAndPasswdAndDefaultAddress {
+  margin: 10px 40px 10px 40px;
+}
+
+.idAndPasswdAndDefaultAddress {
+  padding-top: 50px;
+  display: grid;
+  /* 
+    70px: 아이디입력
+    70px: 패스워드입력
+    70px: 기본배달주소입력
+    40px: 회원가입버튼 
+  */
+  grid-template-rows: 70px 70px 70px 40px;
+}
+
+/* 평소엔 가려져있다가 회원가입 실패하면 js에서 1초간 킴 */
+.joinFailedAlert {
+  display: none;
+}

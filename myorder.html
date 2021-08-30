@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/footer.css">
 
     <title>경대도시락</title>
+    <link rel="shortcut icon" type="image/jpg" href="/images/favicon.ico" />
 
     <!-- js -->
     <script src="js/myorder.js"></script>
@@ -27,11 +28,45 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/7b8019f398.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div>
-        <h1>myorder</h1>
+    <div class="myOrderMain fullsize">
+        <!-- 메인화면으로 가는 뒤로가기 버튼 -->
+        <i class="toMainBtn fas fa-long-arrow-alt-left" onclick="toMain()"></i>
+        <header>
+            <h1 class="myOrderTitle">나의 주문내역</h1>
+        </header>
+        <!-- 화면 접속과 동시에 데이터패치 시행 -->
+        <main>
+            <h2 class="myMenu">???</h2>
+            <div class="quantity">총 수량 ???</div>
+            <div class="address">???</div>
+            <div class="time">???</div>
+            <div class="demandContainer">
+                <div class="demandTitle">요청사항</div>
+                <div class="demandContent">???</div>
+            </div>
+        </main>
+        <section>
+            <!-- 앞뒤버튼 -->
+            <div class="prevAndNextBtnContainer">
+                <i onclick="changeIndex('prev')" class="prevBtn leftBtn fas fa-chevron-left"></i>
+                <i onclick="changeIndex('next')" class="nextBtn rightBtn fas fa-chevron-right"></i>
+            </div>
+            <!-- 수정, 취소버튼 -->
+            <div class="fixAndCancelBtnContainer">
+                <button type="button" class="fixBtn btn btn-warning" onclick="goOrder()">수정하기</button>
+                <button type="button" class="cancelBtn btn btn-danger" onclick="openCancelDialog()">취소하기</button>
+            </div>
+        </section>
+        <footer>
+            <div>(주)경대도시락</div>
+            <div>All right reserved</div>
+        </footer>
     </div>
 </body>
 
