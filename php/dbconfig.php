@@ -12,10 +12,10 @@ ini_set("display_errors", 1);
 header("Content-Type:application/json");
 
 // DB 접속
-$host = 'localhost';
-$user = 'lunchbox';
-$pw = 'lunchbox';
-$dbName = 'lunchbox';
+$host = '203.255.3.144:1315';
+$user = 'web2';
+$pw = 'web2';
+$dbName = 'web2';
 $db = new mysqli($host, $user, $pw, $dbName);
 
 // 기본 클라이언트 문자 집합 설정하기
