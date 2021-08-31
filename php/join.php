@@ -7,6 +7,7 @@ $_POST = JSON_DECODE(file_get_contents("php://input"), true);
 // 클라이언트로부터 받아온 것을 php 변수에 담음
 $memberId = $_POST["id"];
 $memberPw = $_POST["pw"];
+$memberHashedPw = password_hash($memberPw, PASSWORD_DEFAULT); 
 $memberDefaultAddress = $_POST["defaultAddress"];
 
 // member 테이블로부터 id가 일치하는게 있는지 파악
@@ -23,7 +24,7 @@ $row = $res->fetch_array(MYSQLI_ASSOC);
 if ($row === null) { 
     $_SESSION["ses_username"] = $memberId; // 세션변수에 입력
     $sql = "INSERT INTO `person` (`user_id`, `password`, `default_address`) 
-        VALUES ('$memberId','$memberPw','$memberDefaultAddress')";
+        VALUES ('$memberId','$memberHashedPw','$memberDefaultAddress')";
     $db->query($sql); // SQL 실행
     echo json_encode(true,JSON_UNESCAPED_UNICODE|JSON_NUMERIC_CHECK);
 } else {            // 만약 동일한 아이디가 있다면 false 반환하며 회원가입 실패

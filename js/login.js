@@ -20,6 +20,7 @@ const login = async () => {
         id: id,
         pw: password
     });
+    
     if(response.data){                  // 로그인 성공 시
       location.replace("../main.html"); // 메인화면으로 이동
     } else {                            // 로그인 실패 시

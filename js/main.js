@@ -6,10 +6,10 @@ let index = 0;
 onload = async () => {
   try {
     const response = await axios.get("../php/sessionCheck.php");
-    if (response.data) {
-      getData(); // 로그인정보가 있으면 모든 데이터 가져오기
-    } else {
-      location.href = "login.html"; // 로그인정보가 없으면 로그인화면으로
+    if(response.data){ // 세션에 로그인정보가 있을 경우
+      getData();
+    } else {  // 세션에 로그인정보가 없을 경우
+      location.href = "login.html";
     }
   } catch (error) {
     console.log(error);
@@ -81,3 +81,12 @@ const goOrder = async () => {
     console.log(error);
   }
 };
+
+const logout = async () => {
+  try {
+    await axios.get("../php/logout.php");
+    location.href = "login.html";
+  } catch (error) {
+    console.log(error);
+  }
+}
