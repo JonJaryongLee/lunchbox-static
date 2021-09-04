@@ -1,3 +1,8 @@
+/* 주문내역이 없을 경우 보이는 화면 */
+.ifNoData {
+  display: none;
+}
+
 /* 
   1fr: 뒤로가기 버튼
   1.5fr: 나의 주문내역
@@ -6,6 +11,7 @@
   50px: 푸터 
 */
 .myOrderMain {
+  font-family: 'Nanum Gothic', sans-serif;
   grid-template-rows: 1fr 1.5fr 4fr 2fr 50px;
 }
 
@@ -21,7 +27,7 @@ section {
 }
 
 .myMenu,
-.quantity,
+.quantityContainer,
 .address,
 .time,
 .demandContainer {
@@ -34,7 +40,7 @@ section {
   color: black;
 }
 
-.quantity,
+.quantityContainer,
 .address,
 .time,
 .demandContainer {

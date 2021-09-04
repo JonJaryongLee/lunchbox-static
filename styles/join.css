@@ -5,6 +5,7 @@
   50px: footer 
 */
 .joinMain {
+  font-family: 'Nanum Gothic', sans-serif;
   grid-template-rows: 30px 30px 2fr 50px;
 }
 

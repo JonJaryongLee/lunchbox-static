@@ -3,6 +3,7 @@
 푸터  50px */
 
 .main {
+  font-family: 'Nanum Gothic', sans-serif;
   grid-template-rows: 50px 1fr 50px;
 }
 

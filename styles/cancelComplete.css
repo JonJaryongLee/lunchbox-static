@@ -1,0 +1,12 @@
+.cancelTitle, .soSad {
+    font-family: 'Nanum Gothic', sans-serif;
+    margin-left: 20px;
+}
+
+.cancelTitle {
+    margin-top: 100px;
+}
+
+.soSad {
+    color: grey;
+}

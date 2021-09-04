@@ -5,6 +5,7 @@
   50px: footer 
 */
 .loginMain {
+  font-family: 'Nanum Gothic', sans-serif;
   grid-template-rows: 30px 2fr 1fr 50px;
 }
 

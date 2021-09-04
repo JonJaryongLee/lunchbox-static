@@ -31,9 +31,20 @@
 
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/7b8019f398.js" crossorigin="anonymous"></script>
+    
+    <!-- 나눔고딕 웹폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <!-- 만약 사용자가 주문을 안 했을 경우 -->
+    <div class="ifNoData">
+        <h1>주문을 아직 안하셨네요...</h1>
+        <a href="main.html">뒤로가기</a>
+    </div>
+    <!-- 주문 내역이 있을 경우 -->
     <div class="myOrderMain fullsize">
         <!-- 메인화면으로 가는 뒤로가기 버튼 -->
         <i class="toMainBtn fas fa-long-arrow-alt-left" onclick="toMain()"></i>
@@ -43,7 +54,11 @@
         <!-- 화면 접속과 동시에 데이터패치 시행 -->
         <main>
             <h2 class="myMenu">???</h2>
-            <div class="quantity">총 수량 ???</div>
+            <div class="quantityContainer">
+                <span>총 수량: </span>
+                <span class="quantity">???</span>
+                <span>개</span>
+            </div>
             <div class="address">???</div>
             <div class="time">???</div>
             <div class="demandContainer">
@@ -60,13 +75,28 @@
             <!-- 수정, 취소버튼 -->
             <div class="fixAndCancelBtnContainer">
                 <button type="button" class="fixBtn btn btn-warning" onclick="goOrder()">수정하기</button>
-                <button type="button" class="cancelBtn btn btn-danger" onclick="openCancelDialog()">취소하기</button>
+                <button type="button" class="cancelBtn btn btn-danger" data-bs-toggle="modal"
+                    data-bs-target="#cancelModal">취소하기</button>
             </div>
         </section>
         <footer>
             <div>(주)경대도시락</div>
             <div>All right reserved</div>
         </footer>
+    </div>
+    <!-- 취소 모달 -->
+    <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="cancelModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    취소하시겠습니까?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                    <button type="button" class="btn btn-danger" onclick="cancel()">취소</button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
