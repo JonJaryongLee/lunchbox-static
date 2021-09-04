@@ -7,7 +7,7 @@ const check = (re, what) => {
 };
 
 const toLogin = () => {
-  location.replace("../login.html");
+  location.replace("/html/login.html");
 };
 
 // 알람을 띄웠다가 1초후에 종료
@@ -48,7 +48,7 @@ const join = async () => {
     });
     if (response.data) {
       // 회원가입 성공 시
-      location.replace("../main.html"); // 메인화면으로 이동
+      location.replace("/html/main.html"); // 메인화면으로 이동
     } else {
       // 회원가입 실패 시
       showAlarm(failedAlert); // 경고창 띄우고 1초후에 끄기

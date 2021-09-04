@@ -7,7 +7,7 @@ onload = async () => {
   try {
     let response = await axios.get("../php/sessionCheck.php");
     if (!response.data) {
-      location.href = "login.html"; // 로그인정보가 없으면 로그인화면으로
+      location.href = "/html/login.html"; // 로그인정보가 없으면 로그인화면으로
     }
     // 로그인 정보가 있다면 사용자 주문정보 불러오기
     response = await axios.get("../php/getMyOrder.php");
@@ -31,7 +31,7 @@ onload = async () => {
 };
 
 const toMain = () => {
-  location.href = "main.html";
+  location.href = "/html/main.html";
 };
 
 // 현재 인덱스에 맞게 내용 수정
@@ -71,7 +71,7 @@ const goOrder = async () => {
     await axios.post("../php/setOrderTimeToSession.php", {
       order_time: datas[index].order_time,
     });
-    location.replace("../order.html"); // 주문화면으로 이동
+    location.replace("/html/order.html"); // 주문화면으로 이동
   } catch (error) {
     console.log(error);
   }
@@ -83,7 +83,7 @@ const cancel = async () => {
     const response = await axios.post("../php/menuCancel.php", {
       order_time: datas[index].order_time
     });
-    location.replace("../cancelComplete.html"); // 주문 취소 완료화면으로 이동
+    location.replace("/html/cancelComplete.html"); // 주문 취소 완료화면으로 이동
   } catch (error) {
     console.log(error);
   }

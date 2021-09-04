@@ -9,7 +9,7 @@ onload = async () => {
     if(response.data){ // 세션에 로그인정보가 있을 경우
       getData();
     } else {  // 세션에 로그인정보가 없을 경우
-      location.href = "login.html";
+      location.href = "/html/login.html";
     }
   } catch (error) {
     console.log(error);
@@ -76,7 +76,7 @@ const goOrder = async () => {
       index: index,
     });
     // 세션 등록한 후 이동
-    location.href = "order.html";
+    location.href = "/html/order.html";
   } catch (error) {
     console.log(error);
   }
@@ -85,7 +85,7 @@ const goOrder = async () => {
 const logout = async () => {
   try {
     await axios.get("../php/logout.php");
-    location.href = "login.html";
+    location.href = "/html/login.html";
   } catch (error) {
     console.log(error);
   }

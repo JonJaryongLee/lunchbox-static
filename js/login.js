@@ -22,7 +22,7 @@ const login = async () => {
     });
     
     if(response.data){                  // 로그인 성공 시
-      location.replace("../main.html"); // 메인화면으로 이동
+      location.replace("/html/main.html"); // 메인화면으로 이동
     } else {                            // 로그인 실패 시
       showAlarm(failedAlert);           // 경고창 띄우고 1초후에 끄기
     }

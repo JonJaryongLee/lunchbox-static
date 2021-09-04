@@ -7,15 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <!-- css -->
-    <link rel="stylesheet" href="styles/allPages.css">
-    <link rel="stylesheet" href="styles/join.css">
-    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="/styles/allPages.css">
+    <link rel="stylesheet" href="/styles/login.css">
+    <link rel="stylesheet" href="/styles/footer.css">
 
     <title>경대도시락</title>
     <link rel="shortcut icon" type="image/jpg" href="/images/favicon.ico" />
 
     <!-- js -->
-    <script src="js/join.js"></script>
+    <script src="/js/login.js"></script>
 
     <!-- axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
@@ -29,9 +29,6 @@
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
 
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/7b8019f398.js" crossorigin="anonymous"></script>
-
     <!-- 나눔고딕 웹폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,15 +36,14 @@
 </head>
 
 <body>
-    <div class="joinMain fullsize">
-        <!-- 평소엔 가려져있다가 회원가입 실패 시 등장 -->
-        <section class="joinFailedAlertContainer">
-            <div class="joinFailedAlert alert alert-danger" role="alert">
-                회원가입 실패!
+    <div class="loginMain fullsize">
+        <!-- 평소엔 가려져있다가 로그인 실패 시 등장 -->
+        <section class="loginFailedAlertContainer">
+            <div class="loginFailedAlert alert alert-danger" role="alert">
+                로그인 실패!
             </div>
         </section>
-        <i class="toLoginBtn fas fa-long-arrow-alt-left" onclick="toLogin()"></i>
-        <section class="idAndPasswdAndDefaultAddress">
+        <section class="idAndPasswd">
             <div class="form-floating">
                 <input type="text" class="id-input form-control" id="idInput" placeholder="아이디">
                 <label for="idInput">아이디</label>
@@ -56,16 +52,15 @@
                 <input type="password" class="password-input form-control" id="passwdInput" placeholder="비밀번호">
                 <label for="passwdInput">비밀번호</label>
             </div>
-            <div class="form-floating">
-                <input type="text" class="default-address-input form-control" id="defaultAddressInput"
-                    placeholder="기본 배달주소">
-                <label for="defaultAddressInput">기본 배달주소</label>
-            </div>
             <div class="buttonContainer d-grid gap-2">
-                <button type="button" class="joinButton btn btn-info" onclick="join()">
-                    회원가입
+                <button type="button" class="loginButton btn btn-info" onclick="login()">
+                    로그인
                 </button>
             </div>
+        </section>
+        <section class=wannaJoin>
+            <span>혹시 경대도시락이 처음이신가요?</span>
+            <a href="./join.html">회원가입</a>
         </section>
         <footer>
             <div>(주)경대도시락</div>
