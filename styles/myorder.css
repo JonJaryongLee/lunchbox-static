@@ -10,6 +10,7 @@
   50px: 푸터 
 */
 .myOrderMain {
+  display: none;
   font-family: 'Nanum Gothic', sans-serif;
   grid-template-rows: 1fr 2fr 1fr 50px;
 }
@@ -29,7 +30,12 @@ section {
   color: grey;
 }
 
+.backIcon {
+  font-size: 1.5rem;
+}
+
 .myOrderTitle {
+  margin-top: 10px;
   font-weight: bold;
   color: black;
 }

@@ -22,8 +22,17 @@ $sql = "
     ('$user_id', '$menu_id', '$quantity', '$address', '$what_time', '$etc');
 ";  
 
-//실행결과는 $res에 저장
-$res = $db->query($sql); 
+$db->query($sql); 
+
+// 디폴트 리퀘스트 추가
+$sql = "
+    UPDATE person
+    SET
+    etc = '$etc'
+    WHERE = user_id = '$user_id'
+";
+
+$db->query($sql);
 
 mysqli_close($db);
 

@@ -11,6 +11,9 @@ $address = $_POST["address"];
 $what_time = $_POST["what_time"];
 $etc = $_POST["etc"];
 
+// 세션에서 아이디 가져옴
+$user_id = $_POST["ses_username"];
+
 // 주문수정
 $sql = "
     UPDATE ordered 
@@ -20,6 +23,16 @@ $sql = "
     what_time = '$what_time',
     etc = '$etc'
     WHERE order_id = '$order_id';
+";
+
+$db->query($sql);
+
+// 디폴트 리퀘스트 추가
+$sql = "
+    UPDATE person
+    SET
+    etc = '$etc'
+    WHERE = user_id = '$user_id'
 ";
 
 $db->query($sql);

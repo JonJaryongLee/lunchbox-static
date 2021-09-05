@@ -2,6 +2,15 @@
 let datas;
 let index = 0;
 
+const getMyOrder = () => {
+  // 첫 화면 데이터 세팅
+  document.querySelector(".myMenu").textContent = datas[0].menu_name;
+  document.querySelector(".quantity").textContent = datas[0].quantity;
+  document.querySelector(".address").textContent = datas[0].address;
+  document.querySelector(".time").textContent = datas[0].what_time;
+  document.querySelector(".demandContent").textContent = datas[0].etc;
+};
+
 // 세션체크
 onload = async () => {
   try {
@@ -13,22 +22,25 @@ onload = async () => {
     response = await axios.get("../php/getMyOrder.php");
     if (response.data) {
       datas = response.data;
-      // 첫 화면 데이터 세팅
-      document.querySelector(".myMenu").textContent = datas[0].menu_name;
-      document.querySelector(".quantity").textContent = datas[0].quantity;
-      document.querySelector(".address").textContent = datas[0].address;
-      document.querySelector(".time").textContent = datas[0].what_time;
-      document.querySelector(".demandContent").textContent = datas[0].etc;
+      getMyOrder();
+      // 로딩 꺼버림
+      document.querySelector(".loading").style.display = "none";
+      document.querySelector(".myOrderMain").style.display = "grid";
     } else {
       // 주문내역이 없어 false가 반환되었을 시
-      // 주문화면을 끄고 주문내역이 없다는 안내 노출
-      document.querySelector(".myOrderMain").style.display = "none";
+      // 로딩 꺼버림
+      document.querySelector(".loading").style.display = "none";
+      // 주문내역이 없다는 안내 노출
       document.querySelector(".ifNoData").style.display = "block";
     }
   } catch (error) {
     console.log(error);
   }
 };
+
+const goMain = () => {
+  location.href = "/html/main.html";
+}
 
 // 현재 인덱스에 맞게 내용 수정
 const changeDOM = () => {

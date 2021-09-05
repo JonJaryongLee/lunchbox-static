@@ -39,6 +39,7 @@
 </head>
 
 <body>
+    <div class="loading">loading...</div>
     <!-- 만약 사용자가 주문을 안 했을 경우 -->
     <div class="ifNoData">
         <h1>주문을 아직 안하셨네요...</h1>
@@ -47,6 +48,7 @@
     <!-- 주문 내역이 있을 경우 -->
     <div class="myOrderMain fullsize">
         <header>
+            <i class="backIcon fas fa-long-arrow-alt-left" onclick="goMain()"></i>
             <h1 class="myOrderTitle">나의 주문내역</h1>
         </header>
         <!-- 화면 접속과 동시에 데이터패치 시행 -->

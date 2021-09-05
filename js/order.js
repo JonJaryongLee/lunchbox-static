@@ -71,9 +71,17 @@ onload = async () => {
       // 수정요청이라면, DOM 수정을 해야한다.
       renderFixData(response.data);
     }
+    // 로딩 꺼버림
+    document.querySelector(".loading").style.display = "none";
+    // 화면 띄움
+    document.querySelector(".order").style.display = "grid";
   } catch (error) {
     console.log(error);
   }
+};
+
+const goMain = () => {
+  location.href = "/html/main.html";
 };
 
 const order = async () => {
