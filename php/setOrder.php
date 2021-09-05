@@ -28,8 +28,8 @@ $db->query($sql);
 $sql = "
     UPDATE person
     SET
-    etc = '$etc'
-    WHERE = user_id = '$user_id'
+    default_request = '$etc'
+    WHERE user_id = '$user_id'
 ";
 
 $db->query($sql);
