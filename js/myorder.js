@@ -88,7 +88,7 @@ const goOrder = async () => {
 // 취소 버튼 눌렀을 때
 const cancel = async () => {
   try {
-    const response = await axios.post("../php/menuCancel.php", {
+    await axios.post("../php/menuCancel.php", {
       order_time: datas[index].order_time
     });
     location.replace("/html/cancelComplete.html"); // 주문 취소 완료화면으로 이동

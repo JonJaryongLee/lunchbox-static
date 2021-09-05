@@ -1,6 +1,4 @@
 <?php
-// 이 php 파일의 경우, 디비연결부가 불필요함.
-
 // 정상적인 json 출력을 위해 에러메세지 오프
 error_reporting(0);
 ini_set("display_errors", 0);

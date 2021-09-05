@@ -6,12 +6,14 @@
 //세션변수 사용을 위함 
 session_start();
 // 에러 콘솔로 출력
+// 실제 배포 시엔 꺼줘야한다.
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 // json type 사용시 필요한 헤더
 header("Content-Type:application/json");
 
 // DB 접속
+// 실제 db정보를 여기다 담으면 큰일남!
 $host = '203.255.3.144:1315';
 $user = 'lunchbox';
 $pw = 'lunchbox';

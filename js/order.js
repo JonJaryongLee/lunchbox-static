@@ -18,6 +18,7 @@ const indexAndTime = {
   6: "01:30PM",
 };
 
+// 세션에 기록되어있는, 유저가 선택한 인덱스 가져와서 DOM조작
 const getUserSelectedMenu = async () => {
   try {
     const response = await axios.get("/php/getUserSelectedMenu.php");
@@ -29,6 +30,7 @@ const getUserSelectedMenu = async () => {
   }
 };
 
+// 유저의 기본배달지와 요청사항 가져옴
 // 단순히 가져오는것뿐만 아니라 붙이는일도 한다.
 const getUserDefaultInfo = async () => {
   try {
@@ -80,6 +82,7 @@ onload = async () => {
   }
 };
 
+// 뒤로가기
 const goMain = () => {
   location.href = "/html/main.html";
 };

@@ -1,8 +1,6 @@
 <?php
 require_once("dbconfig.php"); // 항상 맨 앞줄에 추가
-// // 정상적인 json 출력을 위해 에러메세지 오프
-// error_reporting(0);
-// ini_set("display_errors", 0);
+
 $index = $_SESSION["ses_index"];
 $sql = "
     SELECT menu_day, menu_name
