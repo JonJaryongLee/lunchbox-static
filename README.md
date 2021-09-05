@@ -11,13 +11,13 @@ Database: MariaDB 15
 서버에 올리기위한 도커파일과 SQL 초기샘플파일 포함  
 
 프론트엔드:  
-  html: 525Line  
-  css: 323Line  
-  js: 453Line  
+- html: 525Line  
+- css: 323Line  
+- js: 453Line  
 백엔드:  
-  php: 409Line  
-  sql: 15Line  
-  docker: 4Line  
+- php: 409Line  
+- sql: 15Line  
+- docker: 4Line  
 
 ├── db.sql  
 ├── Dockerfile  
