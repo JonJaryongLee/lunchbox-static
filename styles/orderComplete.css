@@ -1,0 +1,12 @@
+.orderTitle, .message {
+    font-family: 'Nanum Gothic', sans-serif;
+    margin-left: 20px;
+}
+
+.orderTitle {
+    margin-top: 100px;
+}
+
+.message {
+    color: grey;
+}
