@@ -73,7 +73,7 @@ const changeIndex = (mode) => {
 const goOrder = async () => {
   try {
     await axios.post("../php/setMenuToSession.php", {
-      index: index,
+      index: index
     });
     // 세션 등록한 후 이동
     location.href = "/html/order.html";

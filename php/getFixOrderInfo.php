@@ -9,7 +9,8 @@ $order_time = $_SESSION["ses_order_time"];
 if ($_SESSION["ses_order_time"]) {
     // 해당 아이디와 주문시간에 일치하는 아이디를 찾는다.
     $sql = "
-        SELECT 
+        SELECT
+            order_id, 
             quantity, 
             address, 
             what_time, 

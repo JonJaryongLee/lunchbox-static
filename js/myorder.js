@@ -17,7 +17,7 @@ onload = async () => {
       document.querySelector(".myMenu").textContent = datas[0].menu_name;
       document.querySelector(".quantity").textContent = datas[0].quantity;
       document.querySelector(".address").textContent = datas[0].address;
-      document.querySelector(".time").textContent = datas[0].time;
+      document.querySelector(".time").textContent = datas[0].what_time;
       document.querySelector(".demandContent").textContent = datas[0].etc;
     } else {
       // 주문내역이 없어 false가 반환되었을 시
@@ -35,7 +35,7 @@ const changeDOM = () => {
   document.querySelector(".myMenu").textContent = datas[index].menu_name;
   document.querySelector(".quantity").textContent = datas[index].quantity;
   document.querySelector(".address").textContent = datas[index].address;
-  document.querySelector(".time").textContent = datas[index].time;
+  document.querySelector(".time").textContent = datas[index].what_time;
   document.querySelector(".demandContent").textContent = datas[index].etc;
 };
 // 사용자가 옆에 있는 버튼 클릭해 마이오더의 내용이 바뀔 때 동작함
