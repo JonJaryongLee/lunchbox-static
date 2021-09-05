@@ -1,0 +1,39 @@
+/*
+  1fr: 헤더
+  2fr: 주문정보
+  50px: 푸터
+*/
+.order {
+  font-family: "Nanum Gothic", sans-serif;
+  grid-template-rows: 1fr 2fr 50px;
+}
+
+header {
+  text-align: center;
+  padding-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.menuName,
+.menuDate {
+  font-weight: bold;
+}
+
+.menuDate {
+  color: grey;
+}
+
+main {
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.address, .time, .demand {
+  margin-top: 10px;
+}
+
+.orderBtnContainer {
+  margin-top: 10px;
+}

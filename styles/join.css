@@ -1,18 +1,11 @@
 /* 
   30px: 숨겨져있는 경고창용
-  1px: 뒤로가기버튼
   2fr: 아이디, 패스워드, 기본 배달주소 및 회원가입버튼
   50px: footer 
 */
 .joinMain {
   font-family: 'Nanum Gothic', sans-serif;
-  grid-template-rows: 30px 30px 2fr 50px;
-}
-
-.toLoginBtn {
-    display: inline-block;
-    font-size: 1.5rem;
-    margin-left: 10px;
+  grid-template-rows: 30px 2fr 50px;
 }
 
 .idAndPasswdAndDefaultAddress {

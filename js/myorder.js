@@ -30,10 +30,6 @@ onload = async () => {
   }
 };
 
-const toMain = () => {
-  location.href = "/html/main.html";
-};
-
 // 현재 인덱스에 맞게 내용 수정
 const changeDOM = () => {
   document.querySelector(".myMenu").textContent = datas[index].menu_name;

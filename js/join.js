@@ -6,10 +6,6 @@ const check = (re, what) => {
   return false;
 };
 
-const toLogin = () => {
-  location.replace("/html/login.html");
-};
-
 // 알람을 띄웠다가 1초후에 종료
 const showAlarm = (failedAlert) => {
   failedAlert.style.display = "block";

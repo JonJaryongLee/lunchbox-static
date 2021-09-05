@@ -36,8 +36,50 @@
 </head>
 
 <body>
-    <div>
-        <h1>order</h1>
+    <div class="order fullsize">
+        <header>
+            <h1 class="menuName">메뉴이름 ???</h1>
+            <h2 class="menuDate">??? 배달돼요!</h2>
+        </header>
+        <main>
+            <div class="howMany form-floating">
+                <select class="form-select" id="quantity" aria-label="몇 개 시킬건지?">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <label for="quantity">주문수량</label>
+            </div>
+            <div class="address form-floating">
+                <input type="text" class="form-control" id="addressInput" placeholder="text">
+                <label for="addressInput">주소</label>
+            </div>
+            <div class="time form-floating">
+                <select class="form-select" id="timeInput" aria-label="몇시까지?">
+                    <option value="1">11:00AM</option>
+                    <option value="2">11:30AM</option>
+                    <option value="3">12:00PM</option>
+                    <option value="4">12:30PM</option>
+                    <option value="5">01:00PM</option>
+                    <option value="6">01:30PM</option>
+                </select>
+                <label for="timeInput">도착시간</label>
+            </div>
+            <div class="demand form-floating">
+                <input type="text" class="form-control" id="demandInput" placeholder="text">
+                <label for="demandInput">요청사항</label>
+            </div>
+            <div class="orderBtnContainer d-grid gap-2">
+                <button type="submit" class="orderBtn btn btn-info" onclick="order()">
+                    주문하기
+                </button>
+            </div>
+        </main>
+        <footer>
+            <div>(주)경대도시락</div>
+            <div>All right reserved</div>
+        </footer>
     </div>
 </body>
 

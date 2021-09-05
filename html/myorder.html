@@ -31,7 +31,7 @@
 
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/7b8019f398.js" crossorigin="anonymous"></script>
-    
+
     <!-- 나눔고딕 웹폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,8 +46,6 @@
     </div>
     <!-- 주문 내역이 있을 경우 -->
     <div class="myOrderMain fullsize">
-        <!-- 메인화면으로 가는 뒤로가기 버튼 -->
-        <i class="toMainBtn fas fa-long-arrow-alt-left" onclick="toMain()"></i>
         <header>
             <h1 class="myOrderTitle">나의 주문내역</h1>
         </header>
@@ -74,8 +72,8 @@
             </div>
             <!-- 수정, 취소버튼 -->
             <div class="fixAndCancelBtnContainer">
-                <button type="button" class="fixBtn btn btn-warning" onclick="goOrder()">수정하기</button>
-                <button type="button" class="cancelBtn btn btn-danger" data-bs-toggle="modal"
+                <button type="submit" class="fixBtn btn btn-warning" onclick="goOrder()">수정하기</button>
+                <button type="submit" class="cancelBtn btn btn-danger" data-bs-toggle="modal"
                     data-bs-target="#cancelModal">취소하기</button>
             </div>
         </section>
@@ -93,7 +91,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
-                    <button type="button" class="btn btn-danger" onclick="cancel()">취소</button>
+                    <button type="submit" class="btn btn-danger" onclick="cancel()">취소</button>
                 </div>
             </div>
         </div>

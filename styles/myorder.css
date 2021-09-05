@@ -4,26 +4,20 @@
 }
 
 /* 
-  1fr: 뒤로가기 버튼
-  1.5fr: 나의 주문내역
-  4fr: 주문정보
-  2fr: 버튼부
+  1fr: 나의 주문내역
+  2fr: 주문정보
+  1fr: 버튼부
   50px: 푸터 
 */
 .myOrderMain {
   font-family: 'Nanum Gothic', sans-serif;
-  grid-template-rows: 1fr 1.5fr 4fr 2fr 50px;
+  grid-template-rows: 1fr 2fr 1fr 50px;
 }
 
-.toMainBtn,
 header,
 main,
 section {
   padding: 15px 15px 15px 15px;
-}
-
-.toMainBtn {
-  font-size: 1.3rem;
 }
 
 .myMenu,
