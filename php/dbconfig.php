@@ -14,7 +14,7 @@ header("Content-Type:application/json");
 
 // DB 접속
 // 실제 db정보를 여기다 담으면 큰일남!
-$host = '203.255.3.144:1315';
+$host = 'localhost';
 $user = 'lunchbox';
 $pw = 'lunchbox';
 $dbName = 'lunchbox';
